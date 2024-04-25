@@ -58,3 +58,4 @@ Participa en la comunidad:
 Asiste a las reuniones de la comunidad en Discord: 
 Comparte tus ideas y conocimientos con otros colaboradores.
 Ayuda a dar la bienvenida a nuevos miembros de la comunidad.
+***
