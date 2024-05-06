@@ -1,0 +1,199 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo de la caja */
+#caja {
+    float: left;
+    /* Coloca la caja a la derecha */
+    border: 2px solid #000000;
+    box-shadow: 15px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 70%;
+    height: 400px;
+}
+
+/* Foto de perfil */
+#foto-perfil {
+    float: left;
+    /* Coloca la imagen a la izquierda */
+    margin-right: 0%;
+    width: 20%;
+    height: 435px;
+    border-radius: 25% 0 0 0;
+}
+
+/* Información del perfil */
+#informacion-perfil {
+    font-size: 1.5em;
+    /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    /* Texto en negrita */
+    color: orange;
+    /* Color del texto */
+}
+
+/* Descripción de la persona */
+#descripcion-persona {
+    font-family: "Times New Roman", serif;
+    /* Cambia la fuente */
+    font-size: 1.5em;
+    font-style: italic;
+    /* Texto en cursiva */
+    margin-top: 10px;
+}
+
+/* Datos favoritos */
+.datos-favoritos {
+    margin-top: 10px;
+}
+
+.datos-favoritos li {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* Lenguajes aprendidos */
+.lenguajes-aprendidos {
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Enlace de correo electrónico */
+a[href="https://www.example.com"] {
+    color: orange;
+    /* Color inicial del enlace */
+}
+
+a[href="https://www.example.com"]:visited {
+    color: red;
+    /* Color del enlace después de ser visitado */
+}
+
+/* Encabezado */
+header {
+    background-color: #8ebff7;
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* Menú de navegación */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Encabezado */
+.primero {
+    display: inline;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* UCV + pequeño */
+.segundo {
+    font-size: 1em;
+}
+
+/* Nombre de usuario */
+header nav .nombre-usuario {
+    font-weight: bold;
+    color: white;
+}
+
+/* Formulario de búsqueda */
+header nav form {
+    display: inline-block;
+    margin-right: 0%;
+}
+
+header nav input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+header nav button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-principal {
+    display: block;
+    width: 100%;
+    background-color: white;
+    margin: 1% 0 5% 0;
+}
+
+.fila {
+    display: table;
+    /* Simula una tabla para el diseño de filas */
+    width: 100%;
+    /* Ancho completo de la fila */
+    table-layout: fixed;
+    /* Distribuye el ancho de la fila uniformemente entre las columnas */
+}
+
+.contenedor {
+    display: table-cell;
+    /* Cada contenedor se comporta como una celda de tabla */
+    border: 5px solid white;
+    /* Borde opcional para visualización */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    vertical-align: middle;
+    /* Alinea verticalmente el contenido en el centro */
+    background-color: rgb(204, 210, 216);
+}
+
+.contenedor img {
+    max-width: 60%;
+    /* Permite que la imagen ocupe el ancho máximo del contenedor */
+    height: 70%;
+    /* Mantiene la proporción de aspecto de la imagen */
+    margin: 3% auto;
+    /* Centra la imagen horizontalmente */
+    display: block;
+    /* Asegura que la imagen se comporte como un bloque */
+}
+
+.contenedor p {
+    margin-top: 10px;
+    /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para el párrafo del footer */
+footer p {
+    text-align: center;
+    /* Centra el texto */
+    background-color: #8ebff7;
+    /* Color de fondo azul */
+    padding: 10px;
+    /* Agrega espacio alrededor del texto */
+}
+
+.contenedor:hover {
+    background-color: #99c5dd; /* Color de fondo al pasar el ratón */
+  }
+  
+  .contenedor:hover {
+    transform: scale(1.1) rotate(10deg); /* Animación de zoom y rotación */
+  }

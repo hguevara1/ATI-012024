@@ -1,0 +1,39 @@
+@keyframes eyeL {
+    0%  {left:190px; top:190px;}
+    20%   {left:170px; top:190px;}
+    40%  {left:210px; top:190px;}
+    60%  {left:190px; top:170px;}
+    80%  {left:190px; top:210px;}
+    100% {left:190px; top:190px;}
+  }
+
+  @keyframes eyeR {
+    0%  {left:445px; top:190px;}
+    20%   {left:425px; top:190px;}
+    40%  {left:465px; top:190px;}
+    60%  {left:445px; top:170px;}
+    80%  {left:445px; top:210px;}
+    100% {left:445px; top:190px;}
+  }
+
+.left_eye {
+    position: absolute;
+    left: 190px;
+    top: 190px;;
+    -webkit-animation-name: eyeL; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: eyeL;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.right_eye {
+    position: absolute;
+    left: 445px;
+    top: 190px;;
+    -webkit-animation-name: eyeR; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: eyeR;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,18 @@
+#yellow {
+    background-color: yellow;
+}
+.blue {
+    background-color: blue;
+}
+p {
+    background-color: red;
+}
+div h2 {
+    color: aquamarine;
+}
+div p:hover {
+    color: white;
+}
+img {
+    display: block;
+}
