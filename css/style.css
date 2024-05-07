@@ -5,16 +5,7 @@ body {
     padding: 20px;
 }
 
-/* Estilo de la caja */
-#caja {
-    float: left;
-    /* Coloca la caja a la derecha */
-    border: 2px solid #000000;
-    box-shadow: 15px 10px rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    width: 70%;
-    height: 400px;
-}
+
 
 /* Foto de perfil */
 #foto-perfil {
@@ -180,15 +171,7 @@ header nav button[type="submit"] {
     /* Espacio entre la imagen y el texto */
 }
 
-/* Estilo para el párrafo del footer */
-footer p {
-    text-align: center;
-    /* Centra el texto */
-    background-color: #8ebff7;
-    /* Color de fondo azul */
-    padding: 10px;
-    /* Agrega espacio alrededor del texto */
-}
+
 
 .contenedor:hover {
     background-color: #99c5dd; /* Color de fondo al pasar el ratón */
