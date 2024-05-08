@@ -1,35 +1,36 @@
 /* Estilo general del cuerpo */
-body {
+#perfil {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
+    display: flex;
 }
 
- /* Estilo de la caja */
- #caja {
-    float: left;
-    /* Coloca la caja a la derecha */
+/*Estilo del todo el contenedor del perfil*/
+#contenedor-perfil {
+    display: flexbox;
+}
+
+
+/* Estilo de la caja */
+#caja {
     border: 2px solid #000000;
     box-shadow: 15px 10px rgba(0, 0, 0, 0.5);
     padding: 15px;
     width: 70%;
-    height: 400px;
+    height: auto;
 }
 
 /* Foto de perfil */
 #foto-perfil {
-    float: left;
-    /* Coloca la imagen a la izquierda */
     margin-right: 0%;
     width: 20%;
-    height: 435px;
+    height: auto;
     border-radius: 25% 0 0 0;
 }
 
 /* Información del perfil */
 #informacion-perfil {
-    font-size: 1.5em;
-    /* Aumenta el tamaño de la fuente */
     font-weight: bold;
     /* Texto en negrita */
     color: orange;
@@ -39,8 +40,6 @@ body {
 /* Descripción de la persona */
 #descripcion-persona {
     font-family: "Times New Roman", serif;
-    /* Cambia la fuente */
-    font-size: 1.5em;
     font-style: italic;
     /* Texto en cursiva */
     margin-top: 10px;
@@ -53,7 +52,6 @@ body {
 
 .datos-favoritos li {
     margin-bottom: 5px;
-    font-size: 1.1em;
 }
 
 /* Lenguajes aprendidos */
@@ -75,7 +73,6 @@ a[href="https://www.example.com"]:visited {
 
 /* Encabezado */
 header {
-    background-color: #8ebff7;
     border-bottom: 2px solid #ccc;
     padding: 15px;
     text-align: center;
@@ -84,6 +81,9 @@ header {
 
 /* Menú de navegación */
 header nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #8ebff7;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -119,7 +119,7 @@ header nav .nombre-usuario {
 
 /* Formulario de búsqueda */
 header nav form {
-    display: inline-block;
+    display: flex;
     margin-right: 0%;
 }
 
@@ -191,9 +191,154 @@ footer p {
 }
 
 .contenedor:hover {
-    background-color: #99c5dd; /* Color de fondo al pasar el ratón */
-  }
-  
-  .contenedor:hover {
-    transform: scale(1.1) rotate(10deg); /* Animación de zoom y rotación */
-  }
+    background-color: #99c5dd;
+    /* Color de fondo al pasar el ratón */
+}
+
+.contenedor:hover {
+    transform: scale(1.1) rotate(10deg);
+    /* Animación de zoom y rotación */
+}
+
+@media (max-width: 480px) {
+
+    #perfil {
+        flex-direction: column;
+    }
+
+    #pequeña {
+        visibility: visible;
+    }
+
+    #grande {
+        display: none;
+    }
+
+    /* Foto de perfil  pequeña*/
+    #foto-perfil-pequeña {
+        margin-right: 0%;
+        width: 20%;
+        height: auto;
+        border-radius: 25% 0 0 0;
+        visibility: visible;
+    }
+
+    #foto-perfil-grande {
+        display: none;
+    }
+
+    #informacion-perfil,  p {
+        font-size: 0.8em;
+        /* Aumenta el tamaño de la fuente */
+    }
+
+    .datos-favoritos li {
+        font-size: 0.6em;
+    }
+}
+
+/* Estilos para iPads y tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    #perfil {
+        flex-direction: column;
+    }
+
+    #pequeña {
+        visibility: visible;
+    }
+
+    #grande {
+        display: none;
+    }
+
+    /* Foto de perfil  pequeña*/
+    #foto-perfil-pequeña {
+        margin-right: 0%;
+        width: 20%;
+        height: auto;
+        border-radius: 25% 0 0 0;
+        visibility: visible;
+    }
+
+    #foto-perfil-grande {
+        display: none;
+    }
+
+    #informacion-perfil,  p {
+        font-size: 0.8em;
+        /* Aumenta el tamaño de la fuente */
+    }
+
+    .datos-favoritos li {
+        font-size: 0.6em;
+    }
+}
+
+/* Estilos para pantallas pequeñas y ordenadores portátiles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Foto de perfil grande */
+    #foto-perfil-grande {
+        margin-right: 0%;
+        width: 20%;
+        height: auto;
+        border-radius: 25% 0 0 0;
+        visibility: visible;
+    }
+
+    #pequeña {
+        display: none;
+    }
+
+    #grande {
+        visibility: visible;
+    }
+
+    #foto-perfil-pequeña {
+        display: none;
+    }
+
+    #informacion-perfil,  p {
+        font-size: 1.5em;
+        /* Aumenta el tamaño de la fuente */
+    }
+
+    .datos-favoritos li {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilos para pantallas grandes y ordenadores de escritorio (1025px - 1200px) */
+@media (min-width: 1025px) {
+
+    /* Foto de perfil */
+    #foto-perfil-grande {
+        margin-right: 0%;
+        width: 20%;
+        height: auto;
+        border-radius: 25% 0 0 0;
+        visibility: visible;
+    }
+
+    #pequeña {
+        display: none;
+    }
+
+    #grande {
+        visibility: visible;
+    }
+
+    #foto-perfil-pequeña {
+        display: none;
+    }
+
+    #informacion-perfil,  p {
+        font-size: 1.5em;
+        /* Aumenta el tamaño de la fuente */
+    }
+
+    .datos-favoritos li {
+        font-size: 1.1em;
+    }
+}
