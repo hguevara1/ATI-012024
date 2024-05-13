@@ -1,0 +1,19 @@
+{
+    "nombre": "Héctor José Guevara Soto",
+    "descripcion": [
+      "Soy ingeniero Químico de la UCV. Soy jubilado del Metro de Caracas, donde me desempeñe en varios cargos, incluso operador de trenes.",
+      "Actualmente estoy estudiando Licenciado en Computación como segunda carrera. Soy un apasionado de la tecnología y la programación.",
+      "Me encanta aprender cosas nuevas y siempre estoy buscando nuevos desafíos. En mi tiempo libre, disfruto leyendo, jugando videojuegos y escuchando música."
+    ],
+    "color": "Cobalto",
+    "libro": ["Caballo de Troya"],
+    "musica": ["Pop", "Electrónica"],
+    "video_juego": ["S.T.A.L.K.E.R", "Portal 1 y 2", "etc"],
+    "lenguajes":["C++", "Java", "php", "JavaScript", "C#"],
+    "email": "hguevarasotoo@gmail.com",
+    "ci": "10347014",
+    "genero": "masculino",
+    "fecha_nacimiento": "27/02/1969",
+    "imagen": "10347014.jpg"
+  }
+  
