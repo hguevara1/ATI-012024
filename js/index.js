@@ -1,5 +1,5 @@
-function iniciar() {
-    const filePath = '/reto5/10347014/perfil.json';
+function iniciar(idPerfil) {
+    const filePath = "/reto5/"+ idPerfil +"/perfil.json";
     async function obtenerDatos() {
         const response = await fetch(filePath);
         const data = await response.json();
@@ -9,7 +9,7 @@ function iniciar() {
     
     obtenerDatos().then(data => {
         document.getElementById("foto-perfil")
-            .src = "/reto5/10347014/" + data[11];
+            .src = "/reto5/"+ idPerfil+ "/" + data[11];
         document.getElementById("informacion-perfil")
             .firstChild.textContent = data[0];
         document.getElementById("descripcion-persona")
@@ -29,4 +29,9 @@ function iniciar() {
     
 }
 
-window.addEventListener("DOMContentLoaded", iniciar);
+const urlParams = new URLSearchParams(window.location.search);
+const idPerfil = urlParams.get('id'); // Obtener el parámetro "id" de la URL
+
+window.addEventListener("DOMContentLoaded", iniciar(idPerfil));
+
+
