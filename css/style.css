@@ -60,6 +60,10 @@
     /* Texto en negrita */
 }
 
+#textoEmail {
+    display: inline;
+}
+
 /* Enlace de correo electrónico */
 a[href="https://www.example.com"] {
     color: orange;
@@ -112,7 +116,7 @@ header nav li a {
 }
 
 /* Nombre de usuario */
-header nav .nombre-usuario {
+header nav #nombre-usuario {
     font-weight: bold;
     color: white;
 }
