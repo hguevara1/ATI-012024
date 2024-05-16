@@ -204,6 +204,11 @@ footer p {
     /* Animación de zoom y rotación */
 }
 
+#advertencia {
+    text-align: center;
+    color: #99c5dd;
+}
+
 @media (max-width: 480px) {
 
     #perfil {
