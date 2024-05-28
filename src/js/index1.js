@@ -13,13 +13,13 @@ function iniciar(idioma, contPrinpal) {
             idioma = "configES.json"
             break;
     }
-    const filePath = '/reto5/datos/index.json';
+    const filePath = '/src/reto5/datos/index.json';
     async function obtenerDatos() {
         const response = await fetch(filePath);
         const data = await response.json();
         const dataArray = Object.values(data);
 
-        const respuesta = await fetch("/reto5/conf/" + idioma);
+        const respuesta = await fetch("/src/reto5/conf/" + idioma);
         const data1 = await respuesta.json();
         const datos = Object.values(data1);
         return [dataArray, datos];
@@ -94,7 +94,7 @@ function cargarCuadros(data, contPrinpal, sw) {
             elementoCelda = document.createElement("div");
             elementoCelda.classList.add("contenedor")
             elementoImg = document.createElement("img")
-            elementoImg.src = "reto5/" + data[contadorPrincipal].imagen;
+            elementoImg.src = "/src/reto5/" + data[contadorPrincipal].imagen;
             elementoImg.alt = "Imagen ";
             elementoPar = document.createElement("p");
             elementoPar.textContent = data[contadorPrincipal].nombre;

@@ -16,13 +16,13 @@ function iniciar(idPerfil, idioma) {
             idioma = "configES.json"
             break;
     }
-    const filePath = "/reto5/" + idPerfil + "/perfil.json";
+    const filePath = "../" + idPerfil + "/perfil.json";
     async function obtenerDatos() {
         const response = await fetch(filePath);
         const data = await response.json();
         const dataArray = Object.values(data);
 
-        const respuesta = await fetch("/reto5/conf/" + idioma);
+        const respuesta = await fetch("../conf/" + idioma);
         const data1 = await respuesta.json();
         const datos = Object.values(data1);
         return [dataArray, datos];
@@ -30,7 +30,7 @@ function iniciar(idPerfil, idioma) {
 
     obtenerDatos().then(([data, dato]) => {
         document.getElementById("foto-perfil")
-            .src = "/reto5/" + idPerfil + "/" + data[11];
+            .src = "../" + idPerfil + "/" + data[11];
         document.getElementById("informacion-perfil")
             .firstChild.textContent = data[0];
         document.getElementById("descripcion-persona")
