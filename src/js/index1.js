@@ -1,31 +1,32 @@
 function iniciar(idioma, contPrinpal) {
     switch (idioma) {
         case "Es":
-            idioma = "configES.json"
+            idioma1 = "configES.json"
             break;
         case "En":
-            idioma = "configEN.json"
+            idioma1 = "configEN.json"
             break;
         case "Pt":
-            idioma = "configPT.json"
+            idioma1 = "configPT.json"
             break;
         default:
-            idioma = "configES.json"
+            idioma1 = "configES.json"
+            idioma = "Es"
             break;
     }
-    const filePath = '/src/reto5/datos/index.json';
+    const filePath = '/src/perfiles/datos/index.json';
     async function obtenerDatos() {
         const response = await fetch(filePath);
         const data = await response.json();
         const dataArray = Object.values(data);
 
-        const respuesta = await fetch("/src/reto5/conf/" + idioma);
+        const respuesta = await fetch("/src/perfiles/conf/" + idioma1);
         const data1 = await respuesta.json();
         const datos = Object.values(data1);
         return [dataArray, datos];
     }
     obtenerDatos().then(([data, dato]) => {
-        const header = document.getElementById("uno");
+        /*const header = document.getElementById("uno");
         header.children[0].innerHTML = dato[0][0];
         header.children[1].innerHTML = dato[0][1];
         header.children[2].innerHTML = dato[0][2];
@@ -42,8 +43,8 @@ function iniciar(idioma, contPrinpal) {
         }
         const pp = document.getElementsByTagName("footer").item(0)
             .children[0].innerHTML = dato[3];
-        const entrada = document.querySelector("#entrada");
-
+        const entrada = document.querySelector("#entrada");*/
+        sw = false;
         if (entrada) {
             entrada.addEventListener('input', () => { //Escucha de entrada de teclado
                 const valorEntrada = entrada.value;
@@ -54,9 +55,9 @@ function iniciar(idioma, contPrinpal) {
                 } else {
                     cargarCuadros(datosFiltrados, contPrinpal, sw);
                     elementoPar = document.createElement("p");
-                    elementoPar.id="advertencia";
+                    elementoPar.id = "advertencia";
                     const regex = "[query]";
-                    const textoNuevo=dato[14].replace(regex, valorEntrada);
+                    const textoNuevo = dato[14].replace(regex, valorEntrada);
                     elementoPar.textContent = textoNuevo;
                     contPrinpal.appendChild(elementoPar);
                 }
@@ -65,6 +66,26 @@ function iniciar(idioma, contPrinpal) {
         } else {
             console.error("Elemento con id 'entrada' no encontrado");
         }
+        const contenedorPrincipal = document.getElementById("contenedor-principal")
+        contenedorPrincipal.addEventListener('click', function (event) {
+            const elementoClickeado = event.target; // Obtener el elemento clickeado
+            let idDiv = elementoClickeado.target;
+            if (elementoClickeado.target != 'div') {
+                const contenedorDiv = elementoClickeado.closest('div'); // Buscar el ancestro 'div' más cercano
+                idDiv = contenedorDiv.id;
+            }
+            else {
+                idDiv = elementoClickeado.id;
+            }
+            const valorCookie1 = idDiv;
+            const valorCookie2 = idioma;
+
+            document.cookie = `cookie1=${valorCookie1}; path=/`;
+            document.cookie = `cookie2=${valorCookie2}; path=/`;
+            //const url = `/src/perfil.html?idPerfil=${idDiv}&idioma=${idioma}`; // Construir la URL con el ID
+            const url = `/ATI/perfil.py`;
+            window.location.href = url; // Redirigir a la otra página
+        });
     })
         .catch(error => {
             console.error("Error obteniendo datos:", error);
@@ -77,6 +98,7 @@ const idioma = urlParams.get('idioma');
 window.addEventListener("DOMContentLoaded", () => {
     const contenedorPrincipal = document.getElementById("contenedor-principal");
     iniciar(idioma, contenedorPrincipal);
+
 });
 
 function cargarCuadros(data, contPrinpal, sw) {
@@ -93,8 +115,9 @@ function cargarCuadros(data, contPrinpal, sw) {
         while (cantidadElementos > 0 && contador < 4) {
             elementoCelda = document.createElement("div");
             elementoCelda.classList.add("contenedor")
+            elementoCelda.id = data[contadorPrincipal].ci;
             elementoImg = document.createElement("img")
-            elementoImg.src = "/src/reto5/" + data[contadorPrincipal].imagen;
+            elementoImg.src = "/src/perfiles/" + data[contadorPrincipal].imagen;
             elementoImg.alt = "Imagen ";
             elementoPar = document.createElement("p");
             elementoPar.textContent = data[contadorPrincipal].nombre;
@@ -107,7 +130,6 @@ function cargarCuadros(data, contPrinpal, sw) {
             cantidadElementos--;
         }
     }
-
 }
 
 function filtrarPorNombre(nombre, valor) {

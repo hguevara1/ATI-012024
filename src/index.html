@@ -7,7 +7,6 @@
     <link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
     <title>ATI[UCV] 2024-1</title>
     <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="preload" as="fetch" href="/src/reto5/conf/configES.json">
     <script src="/src/js/index1.js"></script>
 </head>
 
@@ -16,17 +15,17 @@
         <nav>
             <ul>
                 <li id="uno">
-                    <p class="primero"></p>
-                    <p class="primero segundo"></p>
-                    <p class="primero"></p>
+                    <p class="primero">%(sitio1)s</p>
+                    <p class="primero segundo">%(sitio2)s</p>
+                    <p class="primero">%(sitio3)s</p>
                 </li>
                 <li>
-                    <span id="nombre-usuario"></span>
+                    <span id="nombre-usuario">%(saludo)s</span>
                 </li>
                 <li>
                     <form>
-                        <input id="entrada" type="text" placeholder="">
-                        <button id="boton" type="submit"></button>
+                        <input id="entrada" type="text" placeholder="%(entrada)s">
+                        <button id="boton" type="submit">%(boton)s</button>
                     </form>
                 </li>
 
@@ -36,14 +35,14 @@
 
     <section>
         <div class="contenedor-principal" id="contenedor-principal">
-            
+            %(perfiles)s
         </div>
     </section>
 
 
 
     <footer>
-        <p></p>
+        <p>%(copyright)s</p>
     </footer>
 </body>
 
